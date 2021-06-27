@@ -27,13 +27,15 @@ The following stocks experienced an increase in trade volume from 2017 to 2018: 
 
 ### Analysis of VBA Refactoring
 Initially, our code took > .6 seconds to run. It utilized a nested loop to loop once through *all of the data* for each ticker value in the 'tickers' array.  In this case, it seaarches through the data 12 times because there are 12 different values in 'tickers'.
-`For i = 0 To 11
+```
+For i = 0 To 11
         ticker = tickers(i)
         totalVolume = 0
         Worksheets(yearValue).Activate
         For j = 2 To rowEnd
             If Cells(j, 1).Value = ticker Then
-                totalVolume = totalVolume + Cells(j, 8).Value`
+                totalVolume = totalVolume + Cells(j, 8).Value
+```
 ## Summary
 
 ### What are the advantages or disadvantages of refactoring code?
