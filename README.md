@@ -39,7 +39,9 @@ For i = 0 To 11
 ...
 ```
 Here are run times before refactoring:
+
 <img width="686" alt="oldcode2017" src="https://user-images.githubusercontent.com/84994321/123558847-54cb5f00-d74d-11eb-950f-cf2314329c10.png">
+
 <img width="679" alt="oldcode2018" src="https://user-images.githubusercontent.com/84994321/123558851-59901300-d74d-11eb-8948-1073606f8187.png">
 
 This works fine but we want to scale up and go real fast.
