@@ -73,7 +73,7 @@ For i = 2 To RowCount
         End If
     Next i
 ```
-We are using a tickerIndex to collect our data in different arrays before outputting it to our spreadsheet.  We are incrementing the tickerIndex each time the ticker changes (step 3d) instead of selecting a new value to look for each time through the loop.  As a result, we only need to loop through one time and run times drop significantly:
+We are using a tickerIndex to collect our data in different arrays before outputting it to our spreadsheet.  We are incrementing the tickerIndex each time the ticker changes (step 3d) instead of selecting a new value to look for each time through the loop.  As a result, we only need to loop through once and run times drop significantly:
 
 <img width="806" alt="VBA_Challenge_2017" src="https://user-images.githubusercontent.com/84994321/123559718-97436a80-d752-11eb-85e1-049e17a2ecc2.png">
 
