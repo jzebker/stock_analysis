@@ -1,7 +1,7 @@
 # Stock Analysis
 
 ## Overview of Project
-Refactor VBA code to help Tom analyze stocks for his parents ***more efficiently***.  In addition, provide a written analysis that details this process and evaluates results.
+Refactor VBA code to help Tom analyze stocks for his parents ***more efficiently***.  In addition, provide a written analysis that details this process and evaluates results.  This analysis will assume familiarity with Tom's initial methodology for computing trade volume and returns for tracked stocks.
 
 ## Results
 
@@ -38,13 +38,42 @@ For i = 0 To 11
                 totalVolume = totalVolume + Cells(j, 8).Value
 ...
 ```
-Here are run times before refactoring:
+Note that rowEnd is a variable that is equal to the total number of rows in the data sheet. Here are run times before refactoring:
 
 <img width="686" alt="oldcode2017" src="https://user-images.githubusercontent.com/84994321/123558847-54cb5f00-d74d-11eb-950f-cf2314329c10.png">
 
 <img width="679" alt="oldcode2018" src="https://user-images.githubusercontent.com/84994321/123558851-59901300-d74d-11eb-8948-1073606f8187.png">
 
-This works fine but we want to scale up and go real fast.
+This works fine but we want to scale up and go real fast.  We can decrease computing time by looping through our data *one time* and collecting info as we go.  Since our data is organized by ticker value (all prices for each stock are adjacent) we will do this by checking to see where the ticker value changes.  Here is the data format:
+
+<img width="471" alt="dataformat" src="https://user-images.githubusercontent.com/84994321/123559255-c0aec700-d74f-11eb-99c3-76a565e8e2b7.png">
+
+Line 503 is the last line in the data sheet with a ticker value of 'CSIQ'.  At line 504, data for 'DQ' begins.  Our code needs to check if the line after our current line has a different ticker value *instead* of searching through *all* of the data for a specific ticker value each time.  This is done below:
+```
+'1a) Create a ticker Index
+    Dim tickerIndex As Integer
+    tickerIndex = 0
+...
+For i = 2 To RowCount
+    
+        '3a) Increase volume for current ticker
+        If Cells(i, 1).Value = tickers(tickerIndex) Then
+            tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+        End If
+        '3b) Check if the current row is the first row with the selected tickerIndex.
+        If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+                tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+        End If
+        '3c) check if the current row is the last row with the selected ticker
+        If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+            'If the next row’s ticker doesn’t match, increase the tickerIndex.
+            '3d) Increase the tickerIndex.
+            tickerIndex = tickerIndex + 1
+        End If
+    Next i
+```
+
 ## Summary
 
 ### What are the advantages or disadvantages of refactoring code?
