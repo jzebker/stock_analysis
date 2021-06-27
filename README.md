@@ -48,7 +48,7 @@ This works fine but we want to scale up and go real fast.  We can decrease compu
 
 <img width="471" alt="dataformat" src="https://user-images.githubusercontent.com/84994321/123559255-c0aec700-d74f-11eb-99c3-76a565e8e2b7.png">
 
-Line 503 is the last line in the data sheet with a ticker value of 'CSIQ'.  At line 504, data for 'DQ' begins.  Our code needs to check if the line after our current line has a different ticker value *instead* of searching through *all* of the data for a specific ticker value each time.  This is done below:
+Line 503 is the last line in the data sheet with a ticker value of 'CSIQ'.  At line 504, data for 'DQ' begins.  Our code needs to check if the line after our current line has a different ticker value *instead* of searching through *all* of the data for a specific ticker value each time.  This is done below (note that rowEnd has been changed to RowCount but it is the same value):
 ```
 '1a) Create a ticker Index
     Dim tickerIndex As Integer
