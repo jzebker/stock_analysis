@@ -26,7 +26,7 @@ The following stocks experienced an increase in trade volume from 2017 to 2018: 
 </table>
 
 ### Analysis of VBA Refactoring
-Initially, our code took > .6 seconds to run. It utilized a nested loop to loop once through *all of the data* for each ticker value in the 'tickers' array.  In this case, it seaarches through the data 12 times because there are 12 different values in 'tickers'.
+Initially, our code took > .6 seconds to run. It utilized a nested loop to loop once through *all of the data* for *each* ticker value in the 'tickers' array.  In this case, it searches through the data 12 times:
 ```
 ...
 For i = 0 To 11
