@@ -24,6 +24,11 @@ The following stocks experienced an increase in trade volume from 2017 to 2018: 
   </tr>
 </tbody>
 </table>
+<p align="center">
+| 2017 | 2018 |
+|------|------|
+| pic  | pic  |
+</p>
 
 ### Analysis of VBA Refactoring
 
