@@ -79,6 +79,7 @@ We are using a tickerIndex to collect our data in different arrays before output
 
 <img width="805" alt="VBA_Challenge_2018" src="https://user-images.githubusercontent.com/84994321/123559709-8692f480-d752-11eb-909b-427dcf742436.png">
 
+The above runtimes include the formatting function and are still significantly lower.
 ## Summary
 
 ### What are the advantages or disadvantages of refactoring code?
