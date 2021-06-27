@@ -35,6 +35,7 @@ For i = 0 To 11
         For j = 2 To rowEnd
             If Cells(j, 1).Value = ticker Then
                 totalVolume = totalVolume + Cells(j, 8).Value
+                ...
 ```
 ## Summary
 
