@@ -83,5 +83,7 @@ The above runtimes include the formatting function and are still significantly l
 ## Summary
 
 ### What are the advantages or disadvantages of refactoring code?
+The main reason to refactor code is to improve performance.  This is not always a good idea because the improved performance can easily not be worth the time or effort put in to get it.
+>If it ain't broke don't fix it. -*America*
 
 ### How do these pros and cons apply to refactoring the original VBA script?
