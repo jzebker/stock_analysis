@@ -94,7 +94,7 @@ The above runtimes include the formatting function and are still significantly l
 
 In reference to Tom's stock analysis in particular, refactoring code was advantageous.
 
-(1) The improved performance was worth it for Tom because his original code was too slow for what he was trying to do.  He decided it was something he wanted to do so it was worth the time and effort for him.  He got me to do it for him.
+(1) The improved performance was worth it for Tom because his original code was too slow for what he was trying to do.  He decided it was something he wanted to do so it was worth the time and effort for him.
 
 (2) In this case, the overall goal and the issues with the original were communicated well.  Tom wanted to make his stock tracking script faster and he was using a nested for loop to iterate through a list of data multiple times.
 
