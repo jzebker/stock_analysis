@@ -82,12 +82,20 @@ We are using a tickerIndex to collect our data in different arrays before output
 The above runtimes include the formatting function and are still significantly lower.
 ## Summary
 
-### What are the advantages or disadvantages of refactoring code?
+### What are the advantages or disadvantages of refactoring code in general?
 
-The main advantage of refactoring code is improved performance.  This is not always a good idea because the improved performance may not be worth the time or effort put in to get it.
+(1) The main advantage of refactoring code is improved performance.  This is not always a good idea because the improved performance may not be worth the time or effort put in to get it.
 
-Another advantage of refactoring code is that somebody has already written the basic outline for what needs to be done.  This means code does not have to be rewritten from scratch.  However, if the original code is in any way difficult to understand then it may take more effort just to figure out what is going on than it would to understand the problem and write a new solution.
+(2) Another advantage of refactoring code is that somebody has already written the basic outline for what needs to be done.  This means code does not have to be rewritten from scratch.  However, if the original code is in any way difficult to understand then it may take more effort just to figure out what is going on than it would to understand the problem and write a new solution.
 
-A third advantage of refactoring code is that the code itself can improve.  We have the advantage of learning from previous attempts that we would not have if everything were always written anew.
+(3) A third advantage of refactoring code is that the code itself can improve.  We have the advantage of learning from previous attempts that we would not have if everything were always written anew.
 
 ### How do these pros and cons apply to refactoring the original VBA script?
+
+In reference to Tom's stock analysis in particular, refactoring code was advantageous.
+
+(1) The improved performance was worth it for Tom because his original code was too slow for what he was trying to do.  He decided it was something he wanted to do so it was worth the time and effort for him.  He got me to do it for him.
+
+(2) In this case, the overall goal and the issues with the original were communicated well.  Tom wanted to make his stock tracking script faster and he was using a nested for loop to iterate through a list of data multiple times.
+
+(3) In this case, it was helpful to improve the code because a purpose of this project was to learn.
