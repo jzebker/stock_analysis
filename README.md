@@ -90,7 +90,7 @@ The above runtimes include the formatting function and are still significantly l
 
 (3) A third advantage of refactoring code is that the code itself can improve.  We have the advantage of learning from previous attempts that we would not have if everything were always written anew.
 
-### How do these pros and cons apply to refactoring the original VBA script?
+### How do these (3) pros and cons apply to refactoring the original VBA script?
 
 In reference to Tom's stock analysis in particular, refactoring code was advantageous.
 
